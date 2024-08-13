@@ -1,0 +1,104 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+
+.App {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("https://bellroy-cms-images.imgix.net/1259/background-texture-repeat.jpg?auto=format&fit=max");
+}
+
+.robot-simulator {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Lato", Arial, sans-serif;
+  color: #333;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(5, 50px);
+  grid-template-rows: repeat(5, 50px);
+  gap: 5px;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.grid-cell {
+  width: 50px;
+  height: 50px;
+  border: 1px solid #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(225, 90, 29);
+}
+
+.robot {
+  background-color: #fff;
+}
+
+.robot-icon {
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  transform-origin: center;
+  transition: transform 0.3s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.moving {
+  transition: transform 0.3s ease-in-out;
+}
+
+.rotating {
+  transition: transform 0.3s ease-in-out;
+}
+
+.controls {
+  display: flex;
+  gap: 10px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #0b72b9;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 0.25rem;
+}
+
+button:hover {
+  background-color: #084d7f;
+}
+
+button.move {
+  background-color: rgb(225, 90, 29);
+  box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px,
+    rgba(0, 0, 0, 0.3) 0px 27px 15px -30px, rgba(0, 0, 0, 0.5);
+}
+
+/* utilitiy classes */
+.w-5 {
+  width: 20px;
+}
+
+.scaleX1 {
+  transform: scaleX(-1);
+}
+.flex {
+  display: flex;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.align-center {
+  align-items: center;
+}
